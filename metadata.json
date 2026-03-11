@@ -1,0 +1,7 @@
+{
+  "name": "EXPRESS - Registro de Emociones",
+  "description": "Tu espacio personal para comprender y rastrear tus emociones diarias.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
