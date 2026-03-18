@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "user": {
+      "title": "User Profile",
+      "description": "Information about the user",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "name", "email"]
+    },
+    "emotion": {
+      "title": "Emotion Entry",
+      "description": "A recorded emotion entry",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "emotion": { "type": "string" },
+        "intensity": { "type": "number" },
+        "note": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "category": { "type": "string", "enum": ["POSITIVA", "NEGATIVA"] }
+      },
+      "required": ["uid", "emotion", "timestamp", "category"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "user",
+      "description": "User profile documents"
+    },
+    "/emotions/{emotionId}": {
+      "schema": "emotion",
+      "description": "Emotion record documents"
+    }
+  }
+}

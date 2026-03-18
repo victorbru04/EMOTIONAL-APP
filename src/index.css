@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+  --color-text-main: var(--text-main);
+}
+
+:root {
+  --primary: #004a99;
+  --primary-light: #005cb8;
+  --accent: #D4F01D;
+  --accent-muted: rgba(212, 240, 29, 0.2);
+  --text-main: #ffffff;
+}
+
+.theme-inverted {
+  --primary: #D4F01D;
+  --primary-light: #e5f760;
+  --accent: #004a99;
+  --accent-muted: rgba(0, 74, 153, 0.2);
+  --text-main: #004a99;
+}
